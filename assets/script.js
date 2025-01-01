@@ -1,0 +1,20 @@
+'use strict';
+
+/**
+ * navbar toggle
+ */
+
+const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
+const header = document.querySelector("[data-header]");
+
+navToggleBtn.addEventListener("click", function () {
+  this.classList.toggle("active");
+  header.classList.toggle("active");
+});
+
+const goTopBtn = document.querySelector("[data-go-top]");
+
+window.addEventListener("scroll", function () {
+  window.scrollY >= 6000 ? goTopBtn.classList.add("active")
+    : goTopBtn.classList.remove("active");
+});
